@@ -1,0 +1,83 @@
+{
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
+      ["程序启动"]	= "--程序启动时会执行的事件" ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= false ;
+      } ;
+  ["web"]	= {
+      ["启动网页"]	= "http://download.mokeedev.com" ;
+      ["启用长按菜单"]	= true ;
+      ["启用进度条"]	= true ;
+      ["网页沉浸"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["支持打开外部应用"]	= true ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["url"]	= "download.mokeedev.com" ;
+          ["js"]	= "// JavaScript source code\
+wait=\"1\"\
+\13gg =document.getElementById(\"card-googleads-success-1\")\13\
+var x = document.getElementsByClassName(\"card-content\")\13\
+for(i=0;i<x.length;i++)\13{\13   \
+ str=x[i].innerHTML\13    \
+if (str.match('它们有什么区别') || str.match(\"googlesyndication.com\")||str.match(\"硬件参数\")){\
+\13        x[i].style.display='none'\13\
+    }\13\
+}\13\13\
+x =document.getElementsByClassName(\"card info device\")\
+\13for (i = 0; i < x.length; i++) {\13 \
+   x[i].style.display='none'\13\
+}\13\13\
+x = document.getElementsByClassName(\"card info hardware\")\
+\13for (i = 0; i < x.length; i++) {\13    x[i].style.display = 'none'\
+\13}\13\
+uv=document.getElementsByClassName(\"userView\")\
+uv[0].style.display=\"none\"\
+li = document.getElementsByClassName(\"waves-effect\")\
+for (i = 0; i < li.length; i++) {\
+    str = li[i].innerHTML;\
+    if (str.match(\"项目首页\") ||str.match(\"魔趣论坛\") || str.match(\"扩展组件\") || str.match(\"更新日志\") || str.match(\"编译状态\")||str.match(\"导航\")) { \
+    li[i].style.display = 'none'\
+    }\
+}\
+\
+li = document.getElementsByTagName(\"a\")\
+for (i = 0; i < li.length; i++) {\
+    str = li[i].innerHTML;\
+    if (str.match(\"导航\")) {\
+        li[i].style.display = 'none'\
+    }\
+}\
+\
+li = document.getElementsByClassName(\"collapsible-header waves-effect\")\
+for (i = 0; i < li.length; i++) {\
+    str = li[i].innerHTML;\
+    if (str.match(\"贡献\")||str.match(\"社交网络\")) {\
+        li[i].style.display = 'none'\
+    }\
+}" ;
+          ["remove_element"]	= "@ID(build_statud)" ;
+          } ;
+      } ;
+  ["colors"]	= {
+      ["导航栏"]	= "#ff33a7aa" ;
+      ["进度条"]	= "#00000000" ;
+      ["状态栏"]	= "#ffffffff" ;
+      } ;
+  } ;
